@@ -11,6 +11,10 @@ export const User = sequelize.define("usuarios", {
     type: DataTypes.STRING,
     comment: "aca se guarda encriptada la password usando bcrypt",
   },
+  correo: {
+    type: DataTypes.STRING,
+    unique: true,
+  },
   rut: {
     type: DataTypes.STRING,
     unique: true,

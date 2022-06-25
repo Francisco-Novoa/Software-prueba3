@@ -8,9 +8,11 @@ import { ValidaRut } from "../../utils/rutValidator.js";
 export const usersRouter = express.Router();
 
 usersRouter.post("/", async (req, res) => {
-  const { password, rut, nombre, apellidos, fecha_nacimiento, fono, genero, direccion, } = req.body;
-  if (!password || !rut)
-    return res.status(400).send({ error: "Password o rut no encontrado" });
+  const { password, correo, rut, nombre, apellidos, fecha_nacimiento, fono, genero, direccion, } = req.body;
+  if (!password || !correo)
+    return res.status(400).send({ error: "Password o correo no encontrado" });
+  if (!correo)
+    return res.status(400).send({ error: "correo no encontrado" });
   if (password.length <= 6)
     return res.status(400).send({ error: "Contraseña recibida es muy corta" });
   if (!ValidaRut(rut))
@@ -19,41 +21,44 @@ usersRouter.post("/", async (req, res) => {
     return res.status(400).send({ error: "Nombre no debe estar vacio" });
   if (!apellidos)
     return res.status(400).send({ error: "Apellidos no debe estar vacio" });
-  if (!fecha_nacimiento)
-    return res.status(400).send({ error: "Fecha de nacimiento no debe estar vacio" });
   if (!fono)
     return res.status(400).send({ error: "Fono no debe estar vacio" });
   if (!direccion)
     return res.status(400).send({ error: "Direccion no debe estar vacia" });
   const saltRounds = 10;
   const passwordHash = await bcrypt.hash(password, saltRounds);
-  const user = await User.create({ rut, passwordHash, nombre, apellidos, fecha_nacimiento, genero, fono, direccion, });
-  const token = jwt.sign({ id: user._id, rut }, SECRET);
+  const user = await User.create({ rut, correo, passwordHash, nombre, apellidos, fecha_nacimiento, genero, fono, direccion, }, { raw: true });
+  const token = jwt.sign({ id: user._id, correo }, SECRET);
   res.status(201).json({
-    token,
     message: "usuario creado exitosamente",
-    data: { user: user.username, id: user.id },
+    data: { token, id: user.id, correo: user.correo, nombre },
   });
 });
 
 usersRouter.put("/cambiarpass", async (req, res) => {
-  const { password, rut, id } = req.body;
-  if (!password || !rut)
-    return res.status(400).send({ error: "Password o rut no encontrado" });
+  const { password, correo } = req.body;
+
+  if (!password || !correo)
+    return res.status(400).send({ error: "Password o correo no encontrado" });
+  const user = await User.findOne({
+    where: { correo },
+    raw: true
+  })
+  if (!user)
+    return res.status(400).send({ error: "Usuario no encontrado" });
   if (password.length <= 6)
     return res.status(400).send({ error: "Contraseña recibida es muy corta" });
-  if (!ValidaRut(rut))
-    return res.status(400).send({ error: "Rut recibido es invalido" });
+
   const saltRounds = 10;
   const passwordHash = await bcrypt.hash(password, saltRounds);
-  const user = await User.update({ passwordHash }, {
+  const cambiada = await User.update({ passwordHash }, {
     where: {
-      id
+      id: user.id
     },
     returning: true,
     raw: true
   });
-  const cleaned = user.flat()[1]
+  const cleaned = cambiada.flat()[1]
   delete cleaned.passwordHash
   res.status(201).json({
     message: "password cambiada exitosamente",
@@ -72,8 +77,6 @@ usersRouter.put("/:id", async (req, res) => {
     return res.status(400).send({ error: "Nombre no debe estar vacio" });
   if (!apellidos)
     return res.status(400).send({ error: "Apellidos no debe estar vacio" });
-  if (!fecha_nacimiento)
-    return res.status(400).send({ error: "Fecha de nacimiento no debe estar vacio" });
   if (!fono)
     return res.status(400).send({ error: "Fono no debe estar vacio" });
   if (!direccion)

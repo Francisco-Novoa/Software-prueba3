@@ -1,738 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-<title>AndoTrekkeando</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Go Hiking Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Proyecto Desarrollo de Software</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/index.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.jpg">
+    <!--     <link rel="stylesheet" type="text/css" href="css/Estilos.css" /> -->
 
-<!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!--// bootstrap-css -->
-<!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<!--// css -->
-<!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons -->
-<!-- galeria -->
-<link type="text/css" rel="stylesheet" href="css/cm-overlay.css" />
-<!-- //galeria -->
-
-<!-- fuente -->
-<link href="//fonts.googleapis.com/css?family=Kaushan+Script&amp;subset=latin-ext" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
-<!-- //fuente -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/SmoothScroll.min.js"></script>
-<script src="js/jarallax.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
 </head>
+
 <body>
-	<!-- Banner Home-->
-	<div class="banner" id="home">
-		<div class="banner-dot">
-			<div class="header-top">
-				<div class="container banner-drop">
-					<div class="agile-logo">
-						<h1><a href="index.html">AndoTrekkeando</a></h1>
-					</div>
-					<div class="header-right">
-						<nav>
-							<ul>
-								<li class="active">
-									<a href="index.html"><span>Home</span></a>
-								</li>
-								<li>
-									<a href="#about" class="scroll"><span>Nosotros</span></a>
-								</li>
-								<li>
-									<a href="#services" class="scroll"><span>Servicios</span></a>
-								</li>
-								<li>
-									<a href="#gallery" class="scroll"><span>Galeria</span></a>
-								</li>
-								<li>
-									<a href="#blog" class="scroll"><span>Blog</span></a>
-								</li>
-								<li>
-									<a href="#shop" class="scroll"><span>Tienda</span></a>
-								</li>
-								<li>
-									<a href="#contact" class="scroll"><span>Contacto</span></a>
-								</li>
-							</ul>
-						</nav>
-						<div class="menu-icon"><span></span></div>
-					</div>
-					<div class="clearfix"> </div>
-					<script>
-						(function($){
-							$(".menu-icon").on("click", function(){
-								$(this).toggleClass("open");
-								$(".container").toggleClass("nav-open");
-								$("nav ul li").toggleClass("animate");
-							});
-							  
-						})(jQuery);
-					</script>
-				</div>
-			</div>
-			<div class="w3layouts-slider">
-				<div class="container">
-					<div class="slider">
-						<div class="callbacks_container">
-							<ul class="rslides callbacks callbacks1" id="slider4">
-								<li>	
-									<div class="wthree-banner-grids">
-										<div class="col-md-6 agileits-banner-left">
-											<h3>Aventuras Nuevas</h3>
-											<h4>Unete</h4>
-										</div>
-										<div class="col-md-6 agileinfo-banner-right">
-											<p>Quieres vivir nuevas aventuras que te ayuden a salir de la rutina, unete a nosotros y descubre un mundo nuevo.</p>
-											<div class="banner-border"> </div>
-											<div class="w3-button">
-												<a href="#" data-toggle="modal" data-target="#myModal">Leer más</a>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-								</li>
-								<li>	
-									<div class="wthree-banner-grids">
-										<div class="col-md-6 agileits-banner-left">
-											<h3>Experiencia Única</h3>
-											<h4>Naturaleza Pura </h4>
-										</div>
-										<div class="col-md-6 agileinfo-banner-right">
-											<p>Integrate a nuestra comunidad que ya suma más de 500 socios, planifica tus experiencias junto a nosotros.</p>
-											<div class="banner-border"> </div>
-											<div class="w3-button">
-												<a href="#" data-toggle="modal" data-target="#myModal">Leer más</a>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<script src="js/responsiveslides.min.js"></script>
-						<script>
-							$(function () {
-							  $("#slider4").responsiveSlides({
-								auto: true,
-								pager:true,
-								nav:true,
-								speed: 500,
-								namespace: "callbacks",
-								before: function () {
-								  $('.events').append("<li>before event fired.</li>");
-								},
-								after: function () {
-								  $('.events').append("<li>after event fired.</li>");
-								}
-							  });
-						
-							});
-						 </script>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Banner Home -->
+    <!-- Cabecera -->
 
-	<!-- Pop Up 1-->
-	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header"> 
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						<h4 class="modal-title">¿Qué es el trekking?</h4>
-					</div> 
-					<div class="modal-body">
-					<div class="agileits-w3layouts-info">
-						<img src="images/1.jpg" alt="" />
-						<p>El trekking o excursionismo es una actividad física que consiste en caminar por escenarios naturales, como montañas, bosques, selvas, cañones o ríos. Se diferencia del senderismo en que la modalidad del trekking requiere un mayor esfuerzo físico, ya que mientras el recorrido realizado en senderismo suele tener un grado de dificultad más bajo, debido a que sus rutas discurren por senderos, vías y caminos señalizados, en el excursionismo los recorridos se realizan a través de parajes aislados y sin ninguna ayuda de señales o caminos, lo que representa un mayor contacto con la naturaleza.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Pop Up 1-->
+    <header class="container">
+        <img src="img/loguito.png" width="189" height="57" alt="logo" />
+        <h1>Sitio en deconstruccion</h1>
 
-	<!-- Pop Up 2-->
-		<div class="modal about-modal fade" id="myModal2" tabindex="-1" role="dialog">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header"> 
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-							<h4 class="modal-title">Gabriel Rojas</h4>
-						</div> 
-						<div class="modal-body">
-						<div class="agileits-w3layouts-info">
-							<img src="images/5.jpg" alt="" />
-							<p>Empezar a hacer trekking para mí fue encontrar algo con lo que he disfrutado mucho. Creo que el hacer actividades al aire libre es un panorama bacán para salir de la rutina y para dar un respiro.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<!-- //Pop Up 2-->
+        <!--     Menu -->
 
-	<!-- Pop Up 3-->
-	<div class="modal about-modal fade" id="myModal3" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header"> 
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						<h4 class="modal-title">Alonso James</h4>
-					</div> 
-					<div class="modal-body">
-					<div class="agileits-w3layouts-info">
-						<img src="images/2.jpg" alt="" />
-						<p>Los senderos son muy entretenidos y el método utilizado, donde nadie queda atrás por lo general y nadie va muy adelante hacen el subir a la cima una comunidad de grupo.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Pop Up 3-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary rounded " aria-label="Eleventh navbar example">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    data-bs-target="#menu2" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-	<!-- Pop Up 4-->
-	<div class="modal about-modal fade" id="myModal4" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header"> 
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						<h4 class="modal-title">Emilio Cruz</h4>
-					</div> 
-					<div class="modal-body">
-					<div class="agileits-w3layouts-info">
-						<img src="images/3.jpg" alt="" />
-						<p>La gestión y planificación de las salidas 2 veces al mes me da tiempo para descansar reponerme para la próxima salida y el valor es mucho más accesible que otros programas más caros y grupos más grandes.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Pop Up 4-->
+                    </ul>
+                    <ul class="navbar-nav" id="menu2">
+                        <li class="nav-item" id="loginArea">
+                            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#login">Ingreso</button>
+                        </li>
+                        <li class="nav-item text-center d-flex justify-content-center align-items-center ml-4">
+                            <span class="text-white" id="saludo"></span>
+                        </li>
+                        <li class="nav-item d-none" id="logoutArea">
+                            <button id="logout" type="button" class="btn btn-primary btn-lg">Cerrar Sesion</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-	<!-- Nosotros -->
-	<div class="about" id="about">
-		<div class="col-md-6 w3-agileits-about-left">
-			
-		</div>
-		<div class="col-md-6 agile-about-right">
-			<h2>Nosotros</h2>
-			<h5>Somos un grupo de personas con el afan de generar nuevas experiencias en tu vida</h5>
-			<h5>Amamos tener contacto con la naturaleza, realizar trekking y senderismo por distintos lugares del pais.</h5>
-			<h5>En lo práctico con las salidas puedes conocer gente, acompañado de paisajes silvestres  y al estar rodeado de buena onda, generar un buen momento para variar la cansadora rutina.</h5>
-			<h5>Buscamos hacer de esto, más que una forma de vida, transmitir con mucha energía el mundo del trekking, solo tienes que dar el paso y unirte.</span></h5>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-	<!-- //Nosotros -->
+    <!-- cuerpo -->
 
-	<!-- Servicios -->
-	<div class="services" id="services">
-		<div class="container">
-			<div class="services-top">
-				<div class="col-md-6 services-top-left">
-					<h3>Servicios</h3>
-					<h5>Algunos de Nuestros Servicios</h5>
-					<p>Ofrecemos distintas soluciones.</p>
-				</div>
-				<div class="col-md-6 services-top-right">
-					<div class="services-icons">
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-cogs" aria-hidden="true"></i>
-								<p>Asesorias</p>
-							</div>
-						</div>
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-								<p>Integración</p>
-							</div>
-						</div>
-							<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="w3-agile-services-grids">
-				<div class="col-md-6 services-left">
-					<div class="services-icons">
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-comments" aria-hidden="true"></i>
-								<p>Comunidad</p>
-							</div>
-						</div>
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-certificate" aria-hidden="true"></i>
-								<p>Publicaciones</p>
-							</div>
-						</div>
-							<div class="clearfix"> </div>
-					</div>
-					<div class="services-icons services-icons-bottom">
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-user" aria-hidden="true"></i>
-								<p>Noticias</p>
-							</div>
-						</div>
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-road" aria-hidden="true"></i>
-								<p>Destacados</p>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="col-md-6 services-left">
-					<div class="services-icons">
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-bell" aria-hidden="true"></i>
-								<p>Usuarios</p>
-							</div>
-						</div>
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-asterisk" aria-hidden="true"></i>
-								<p>Phasellus venenatis</p>
-							</div>
-						</div>
-							<div class="clearfix"> </div>
-					</div>
-					<div class="services-icons services-icons-bottom">
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-anchor" aria-hidden="true"></i>
-								<p>Comunidad</p>
-							</div>
-						</div>
-						<div class="col-sm-6 services-grid">
-							<div class="services-grid-icon">
-								<i class="fa fa-cog" aria-hidden="true"></i>
-								<p>Asistencia</p>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //Servicios -->
+    <main class="container">
 
-	<!-- Galeria -->
-	<div class="gallery" id="gallery">
-		<div class="container">
-			<div class="w3ls-heading">
-				<h3>Galleria</h3>
-				<h5>Nuestras fotos</h5>
-			</div>
-		</div>
-		<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-					<ul id="myTab" class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#home-main" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Todo</a></li>
-						<li role="presentation"><a href="#learning" role="tab" id="learning-tab" data-toggle="tab" aria-controls="learning">Cada día</a></li>
-						<li role="presentation"><a href="#playing" role="tab" id="playing-tab" data-toggle="tab" aria-controls="playing">Ocasional</a></li>
-						<li role="presentation"><a href="#painting" role="tab" id="painting-tab" data-toggle="tab" aria-controls="painting">Tendencias</a></li>
-						<li role="presentation"><a href="#school" role="tab" id="school-tab" data-toggle="tab" aria-controls="school">Ascensos</a></li>
-					</ul>
-					<div id="myTabContent" class="tab-content">
-						<div role="tabpanel" class="tab-pane fade in active" id="home-main" aria-labelledby="home-tab">
-							<div class="w3_tab_img">
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/2.jpg">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/2.jpg" alt=" " class="img-responsive" />
-										  </figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/3.jpg">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/3.jpg" alt=" " class="img-responsive" />
-										  </figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/4.jpg">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/4.jpg" alt=" " class="img-responsive" />
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/5.jpg">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/5.jpg" alt=" " class="img-responsive" />
-										</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/6.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/6.jpg" alt=" " class="img-responsive" />
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/7.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/7.jpg" alt=" " class="img-responsive" />
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/8.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/8.jpg" alt=" " class="img-responsive" />
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/9.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/9.jpg" alt=" " class="img-responsive" />
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="learning" aria-labelledby="learning-tab">
-							<div class="w3_tab_img">
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/2.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/2.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/3.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/3.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="playing" aria-labelledby="playing-tab">
-							<div class="w3_tab_img">
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/4.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/4.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/5.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/5.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/6.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/6.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/7.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/7.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="painting" aria-labelledby="painting-tab">
-							<div class="w3_tab_img">
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/8.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/8.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/9.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/9.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/2.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/2.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="school" aria-labelledby="school-tab">
-							<div class="w3_tab_img">
-								<div class="col-md-3 w3_tab_img_left">
-									<div class="demo">
-										<a class="cm-overlay" href="images/3.jpg">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/3.jpg" alt=" " class="img-responsive">
-											</figure>
-										</a>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-			</div>
-			<script src="js/jquery.tools.min.js"></script>
-			<script src="js/jquery.mobile.custom.min.js"></script>
-			<script src="js/jquery.cm-overlay.js"></script>
-			<script>
-				$(document).ready(function(){
-					$('.cm-overlay').cmOverlay();
-				});
-			</script>
-	</div>
-	<!-- //Galeria -->
+        <div class="row justify-content-md-center">
+            <section class="col-md-12">
 
-	<!-- Blog -->
-	<div class="blog" id="blog">
-		<div class="container">
-			<div class="w3ls-heading">
-				<h3>Blog</h3>
-				<h5>Nuestros Posts</h5>
-			</div>
-			<div class="agile-blog-grids">
-				<div class="col-md-4 agile-blog-grid">
-					<div class="agile-blog-grid-img">
-						<a href="#" data-toggle="modal" data-target="#myModal2"><img src="images/5.jpg" alt="" /></a>
-						<a href="#" data-toggle="modal" data-target="#myModal2">Que buen trekking.</a>
-						<p>Publicado por <a href="#">Gabriel</a> &nbsp;&nbsp;el 24 de Septiembre, 2021 &nbsp;&nbsp; <a href="#">Comentarios (07)</a></p>
-					</div>
-					<div class="agile-blog-grid-info">
-						<p>Empezar a hacer trekking para mí fue encontrar algo con lo que he disfrutado mucho. Creo que el hacer actividades al aire libre es un panorama bacán para salir de la rutina y para dar un respiro.</p>
-					</div>
-				</div>
-				<div class="col-md-4 agile-blog-grid">
-					<div class="agile-blog-grid-img">
-						<a href="#" data-toggle="modal" data-target="#myModal3"><img src="images/2.jpg" alt="" /></a>
-						<a href="#" data-toggle="modal" data-target="#myModal3">Vida sana haciendo deporte.</a>
-						<p>Publicado por <a href="#">Alonso</a> &nbsp;&nbsp; el 3 de Octubre, 2021 &nbsp;&nbsp; <a href="#">Comentarios (10)</a></p>
-					</div>
-					<div class="agile-blog-grid-info">
-						<p>Los senderos son muy entretenidos y el método utilizado, donde nadie queda atrás por lo general y nadie va muy adelante hacen  el subir a la cima una comunidad de grupo.</p>
-					</div>
-				</div>
-				<div class="col-md-4 agile-blog-grid">
-					<div class="agile-blog-grid-img">
-						<a href="#" data-toggle="modal" data-target="#myModal4"><img src="images/3.jpg" alt="" /></a>
-						<a href="#" data-toggle="modal" data-target="#myModal4">Atrévete a vivir una nueva experiencia.</a>
-						<p>Publicado por <a href="#">Emilio</a> &nbsp;&nbsp; el 14 de Noviembre, 2021 &nbsp;&nbsp; <a href="#">Comentarios (15)</a></p>
-					</div>
-					<div class="agile-blog-grid-info">
-						<p>La gestión y planificación de las salidas 2 veces al mes me da tiempo para descansar reponerme para la próxima salida y el valor es mucho más accesible que otros programas más caros y grupos más grandes.</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //Blog -->
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="bd-placeholder-img" width="100%" height="100%" src="img/1.png"
+                                aria-hidden="true" />
 
-	<!-- Tienda -->
-	<div class="team" id="shop">
-		<div class="container">
-			<div class="w3ls-heading">
-				<h3>Tienda</h3>
-				<h5>Conoce nuestros productos</h5>
-			</div>
-			<div class="agileinfo-team-grids">
-				<div class="col-md-3 wthree-team-grid">
-					<img src="images/10.jpg" alt="">
-					<div class="wthree-team-grid-info">
-						<h4>Bastones de Trekking Aluminio (2 Unidades)</h4>
-						<p>$19.990</p>						
-					</div>
-				</div>
-				<div class="col-md-3 wthree-team-grid">
-					<img src="images/11.jpg" alt="">
-					<div class="wthree-team-grid-info">
-						<h4>Columbus Lámpara Frontal CF 3</h4>
-						<p>$9.990</p>						
-					</div>
-				</div>
-				<div class="col-md-3 wthree-team-grid">
-					<img src="images/12.jpg" alt="">
-					<div class="wthree-team-grid-info">
-						<h4>Banano Columbus Hydra Hip Belt</h4>
-						<p>$29.990</p>
-					</div>
-				</div>
-				<div class="col-md-3 wthree-team-grid">
-					<img src="images/13.jpg" alt="">
-					<div class="wthree-team-grid-info">
-						<h4>Columbus Botella Acero Inoxidable AQUA 750</h4>
-						<p>$7.990</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //Tienda -->
+                            <div class="container">
+                                <div class="carousel-caption text-start">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="bd-placeholder-img" width="100%" height="100%" src="img/2.png"
+                                aria-hidden="true" />
 
-	<!-- Contacto -->
-	<div class="contact" id="contact">
-		<div class="container">
-			<div class="w3ls-heading">
-				<h3>Contacto</h3>
-				<h5>Envianos tus dudas</h5>
-			</div>
-			<div class="contact-form">
-				<form action="#" method="post">
-					<input type="text" placeholder="Nombre" required="">
-					<input type="email" placeholder="Email" required="">
-					<input type="text" placeholder="Telefono" required="">
-					<textarea placeholder="Mensaje" required=""></textarea>
-					<input type="submit" value="Enviar">
+                            <div class="container">
+                                <div class="carousel-caption">
 
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- //Contacto -->
-	
-	<!-- Footer -->
-	<footer>
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-4 footer-grid">
-					<h4>Menu</h4>
-					<div class="col-md-6 footer-grid-left">
-						<ul>
-							<li>
-								<a href="#home" class="scroll">Home</a>
-							</li>
-							<li>
-								<a href="#about" class="scroll">Nosotros</a>
-							</li>
-							<li>
-								<a href="#services" class="scroll">Servicios</a>
-							</li>
-							<li>
-								<a href="#gallery" class="scroll">Galeria</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-6 footer-grid-left">
-						<ul>
-							<li>
-								<a href="#blog" class="scroll">Blog</a>
-							</li>
-							<li>
-								<a href="#shop" class="scroll">Tienda</a>
-							</li>
-							<li>
-								<a href="#contact" class="scroll">Contacto</a>
-							</li>
-						</ul>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-4 footer-grid">
-					<h4>Contactanos</h4>
-					<ul>
-						<li><span>Ubicación : </span>Antonio Varas 666, Providencia, Chile.</li>
-						<li><span>Telefono : </span> +56 2 2644 8899</li>
-						<li><span>Email : </span><a href="mailto:example@email.com">mail@example.com</a></li>
-					</ul>
-						<div class="team-social-grids">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>
-				</div>
-				<div class="col-md-4 footer-grid">
-					<h4>Novedades</h4>
-					<p>Suscribete</p>
-					<form action="#" method="post">
-						<input type="text" placeholder="Suscribirse" name="Subscribe" required="">
-						<button class="btn1">Ir</button>
-					</form>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</footer>
-	<!-- //Footer -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="bd-placeholder-img" width="100%" height="100%" src="img/3.png"
+                                aria-hidden="true" />
 
-	<!-- Copyright -->
-	<div class="copyright">
-		<div class="container">
-			<p>© 2022 AndoTrekkeando. Todos los derechos reservados | Diseñado por Equipo Alumnos Duoc</p>
-		</div>
-	</div>
-	<!-- //Copyright -->
+                            <div class="container">
+                                <div class="carousel-caption text-end">
 
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<!-- Scrolling Icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
 
-</body>	
+            </section>
+
+
+            <main class="container">
+                <div class="row justify-content-md-center">
+                    <section class="col-md-12">
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#registro">Registrarme</button>
+                </div>
+                <br><br><br>
+        </div>
+
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        <br><br><br>
+        </div>
+
+
+
+        </section>
+        <!-- Pie de pagina -->
+
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="row">
+                <div class="col-6 col-md">
+                    <h5>Dirección</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none"
+                                href="https://goo.gl/maps/1gorsJsKB2zGfYqn6">Ñuñuki 6666, ÑuÑoa.</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Escríbenos!</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none"
+                                href="https://acortar.link/g7hS9t">master@bikes.cl</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Redes Sociales</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none"
+                                href="https://www.instagram.com/vale_capetillo/">Instagram</a></li>
+
+                        <li class="mb-1"><a class="link-secondary text-decoration-none"
+                                href="https://www.facebook.com/vhali/">Facebook</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            </div>
+
+        </footer>
+        </div>
+    </main>
+</body>
+<div class="modal fade" id="registro" tabindex="-1" aria-labelledby="registro" style="display: none;"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCertificado">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Formulario de registro</font>
+                    </font>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="well well-sm">
+                                <form class="form-horizontal" method="post">
+                                    <fieldset>
+                                        <legend class=" header">
+                                            <h5>Si reservas un servicio, participas por una
+                                                entrada a nuestra re-inauguración</h5>
+                                        </legend>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-envelope-o bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Correo</h5>
+                                                <input id="emailInput2" name="email" type="text"
+                                                    placeholder="Ingresa un correo para gestionar reservas"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-phone-square bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Password</h5>
+                                                <input id="passInput2" name="phone" type="password"
+                                                    placeholder="Ingresa tu Contraseña" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-user bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Rut</h5>
+                                                <input id="rutInput" name="name" type="text" placeholder="11111111-1"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-user bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Nombre</h5>
+                                                <input id="nameInput" name="name" type="text"
+                                                    placeholder="¿Cómo te llamas? " class="form-control">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-user bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Apellido</h5>
+                                                <input id="lastnameInput" name="name" type="text"
+                                                    placeholder="¿Cual es tu apellido? " class="form-control">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-phone-square bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Celular</h5>
+                                                <input id="phoneInput" name="phone" type="text"
+                                                    placeholder="+56 9 1234 5678" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-phone-square bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Direccion</h5>
+                                                <input id="addressInput" name="phone" type="text"
+                                                    placeholder="+56 9 1234 5678" class="form-control">
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Cerrar</font>
+                    </font>
+                </button>
+                <button id="registerButton" type="button" class="btn btn-primary">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Registrarme</font>
+                    </font>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="well well-sm">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-user bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Correo</h5>
+                                                <input id="mailInput" name="name" type="text"
+                                                    placeholder="Ingresa tu Email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mt-1">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i
+                                                    class="fa fa-user bigicon"></i></span>
+                                            <div class="col-md-12">
+                                                <h5>Password</h5>
+                                                <input id="passInput" placeholder="Ingresa tu password" name="name"
+                                                    type="password" class="form-control">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-secondary d-flex justify-content-center align-items-center pb-2"
+                    data-bs-dismiss="modal">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Cerrar</font>
+                    </font>
+                </button>
+                <button id="loginButton" type="button"
+                    class="btn btn-primary d-flex justify-content-center align-items-center pb-2">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Login</font>
+                    </font>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </html>

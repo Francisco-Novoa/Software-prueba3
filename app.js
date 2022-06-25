@@ -1,5 +1,5 @@
 import express from "express";
-import "express-async-errors";
+// import "express-async-errors";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";

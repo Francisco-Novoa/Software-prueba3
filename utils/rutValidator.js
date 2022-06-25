@@ -2,7 +2,7 @@ export const ValidaRut = (rutCompleto) => {
     if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto))
         return false;
     const tmp = rutCompleto.split('-');
-    const digv = tmp[1];
+    let digv = tmp[1];
     const rut = tmp[0];
     if (digv === 'K') digv = 'k';
     return (dv(rut) === digv);
