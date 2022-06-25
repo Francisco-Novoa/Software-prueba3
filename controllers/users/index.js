@@ -99,8 +99,18 @@ usersRouter.delete("/:id", async (req, res) => {
     where: {
       id
     },
-    returning: true,
-    raw: true
   });
   res.sendStatus(204);
+});
+
+usersRouter.get("/:id", async (req, res) => {
+  const id = req.params.id
+  const user = await User.findByPk(id, {
+    raw: true
+  });
+  delete user.passwordHash
+  res.status(200).json({
+    message: "usuario obtenido exitosamente",
+    data: { user },
+  });
 });
