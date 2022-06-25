@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import sequelize from "../database/database.js";
 
 export const User = sequelize.define("usuarios", {
-  id_usuario: {
+  id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
@@ -18,29 +18,25 @@ export const User = sequelize.define("usuarios", {
   nombre: {
     type: DataTypes.STRING,
   },
+  apellidos: {
+    type: DataTypes.STRING,
+  },
   fecha_nacimiento: {
     type: DataTypes.DATE,
   },
   genero: {
-    type: DataTypes.STRING,
+    type: DataTypes.ENUM(["masculino", "femenino", "otros", "no responde"]),
+    defaultValue: "no responde"
   },
-  fonocelular: {
+  fono: {
     type: DataTypes.STRING,
   },
   direccion: {
     type: DataTypes.STRING,
   },
-  fono_emergencia: {
-    type: DataTypes.STRING,
-  },
-  nombre_emergencia: {
-    type: DataTypes.STRING,
-  },
   estado: {
-    type: DataTypes.TEXT,
-  },
-  derivar_a: {
-    type: DataTypes.STRING,
+    type: DataTypes.ENUM(["valido", "baneado", "eliminado"]),
+    defaultValue: "valido"
   },
 }, {
   freezeTableName: true

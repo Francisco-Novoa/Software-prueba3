@@ -1,7 +1,7 @@
 ### BACKEND
 
     Backend creado usando nodejs, express y postgres
-    para proyecto de fin del curso de Desarrollo Web de DUOCUC
+    para proyecto de fin del curso de Desarrollo de Software de DUOCUC
 
 ### CORRER EL PROYECTO
 
