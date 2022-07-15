@@ -42,6 +42,7 @@
                     nombre: result.data.nombre
                 }))
                 this.window.location.replace("/secure_site.html")
+                99
             } catch (error) {
                 console.error(error)
             }
